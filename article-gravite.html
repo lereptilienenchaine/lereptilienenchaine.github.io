@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TITRE DE L'ONGLET - Le Reptilien Enchaîné</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8e4de;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            max-width: 900px;
+            margin: auto;
+            border: 5px double #000;
+            padding: 20px;
+            box-shadow: 10px 10px 0px #000;
+        }
+        header { display: flex; align-items: center; justify-content: center; gap: 25px; border-bottom: 8px solid #000; padding-bottom: 15px; }
+        h1 { font-family: "Impact", sans-serif; font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; transform: scaleY(1.2); color: #414143; }
+        .slogan { font-style: italic; font-weight: bold; display: block; margin-top: 5px; font-size: 1.2rem; }
+        .date-line { display: flex; justify-content: space-between; border-bottom: 2px solid #000; font-weight: bold; padding: 5px 0; margin-bottom: 20px; font-size: 0.9rem; }
+        .back-link { display: inline-block; font-weight: bold; color: #000; text-decoration: none; border: 1px solid #000; padding: 5px 10px; background: #fff; margin-bottom: 20px; }
+        .back-link:hover { background: #000; color: #fff; }
+        .headline-article { font-family: "Impact", sans-serif; font-size: 3rem; line-height: 1; margin: 20px 0; text-transform: uppercase; color: #414143; }
+        
+        /* PHOTOS CENTRÉES À 60% */
+        .article-img { 
+            width: 60%; 
+            display: block; 
+            margin: 30px auto; 
+            border: 3px solid #000; 
+            height: auto; 
+        }
+        
+        .content { font-size: 1.2rem; line-height: 1.6; text-align: justify; max-width: 800px; margin: auto; }
+        .dropcap { float: left; font-size: 4.5rem; line-height: 0.8; font-weight: bold; margin-right: 10px; font-family: "Impact", sans-serif; color: #414143; }
+        footer { margin-top: 50px; text-align: center; font-size: 0.8rem; border-top: 2px solid #000; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Mascotte" style="width: 100px; height: auto; background: transparent;">
+    <div style="text-align: left;">
+        <h1>LE REPTILIEN ENCHAÎNÉ</h1>
+        <span class="slogan">L'info qui rampe sous la vérité (et qui n'aime pas le froid)</span>
+    </div>
+</header>
+
+<div class="date-line">
+    <span id="date-du-jour">CHARGEMENT...</span>
+</div>
+
+<a href="index.html" class="back-link">← RETOUR À LA UNE</a>
+
+<main>
+    <div class="headline-article">IL VEUT PROUVER QUE LA
+GRAVITÉ EST UN MYTHE :</div>
+    
+    <p><strong>Mets Il se loupe...</strong></p>
+
+    <img src="blesse.jpg" alt="Photo 1" class="article-img">
+
+    <div class="content">
+        <p><span class="dropcap">L</span>Voulant prouver sa théorie, un chercheur de vérité chute gravement du 3 éme étage de son
+immeuble. Gilles Nobrain, l' auteur du best seller Gravité, tu m' auras pas !!!et du cultissime Le mythe de la gravité expliquée au nuls !!! en plein débat lors d' un dîner organisé chez lui a voulu prouver
+par les faits ce qu' il avançait; à savoir que la gravité n' existerait pas et ne serait qu' un mythe mit en place par les Enlluminato-crustaliens afin d' asservir l'humanité. Il suffirait, selon lui, de
+faire sauter la frontière mentale qui nous impose de rester au sol pour voler. Une excellente concentration alliée à une volonté poussée à l' extrême permettrait de transcender notre état primaire
+d' humain. Face au sceptissisme de ses interlocuteur, Mr Nobrain ouvre les fenêtre et annonce que grâce à son expérience et à ses nombreuses heures d' entraînement, il va sauter et s' envoler
+et ainsi faire la nique à tous ses détracteurs. Il s' élance...
+Malheureusement,pour une raison indéterminée,le chercheur s' écrase 3 étages plus bas !</p>
+        
+        <p>Heureusement l' accident n' est pas mortel. Quand à savoir les raisons pour lequelles l' expérience à ratée, le chercheur à sa petite idée. Il explique son plantage par une hauteur de départ insuffisante. Mr
+Nobrain attend la fin de sa convalescence et la récupération totale de ses fonctions motrices pour expérimenter de nouveau sa théorie.
+Il en est sûr, il est sur la bonne voie. Pour son second test, il sautera d' une hauteur plus importante, lui permettant d'exploiter pleinement selon ses dires le pouvoir psy caché en chacun de nous...
+</p>
+
+
+        <p style="margin-top: 30px; font-weight: bold;">Souhaitons bonne chance à ce scientifique qui bouscule les frontières jusque là admises par la science moderne...</p>
+    </div>
+</main>
+
+<footer><p>LE REPTILIEN ENCHAÎNÉ - TOUS DROITS RÉSERVÉS</p></footer>
+
+<script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
+    document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+</script>
+</body>
+</html>
