@@ -120,6 +120,10 @@
     <p>🏆 <strong>PRIX PULITZER DE L'IMPOSSIBLE 1996</strong> 🏆</p>
     <p>Ce site n'existe pas. Si vous le lisez, c'est que vous faites partie de l'élite (ou que vous avez renversé du café sur votre clavier).</p>
 </footer>
-
+<script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
+    document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+</script>
 </body>
 </html>
