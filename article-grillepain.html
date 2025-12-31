@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>TITRE DE L'ONGLET - Le Reptilien Enchaîné</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #e8e4de;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            max-width: 900px;
+            margin: auto;
+            border: 5px double #000;
+            padding: 20px;
+            box-shadow: 10px 10px 0px #000;
+        }
+        header { display: flex; align-items: center; justify-content: center; gap: 25px; border-bottom: 8px solid #000; padding-bottom: 15px; }
+        h1 { font-family: "Impact", sans-serif; font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; transform: scaleY(1.2); color: #414143; }
+        .slogan { font-style: italic; font-weight: bold; display: block; margin-top: 5px; font-size: 1.2rem; }
+        .date-line { display: flex; justify-content: space-between; border-bottom: 2px solid #000; font-weight: bold; padding: 5px 0; margin-bottom: 20px; font-size: 0.9rem; }
+        .back-link { display: inline-block; font-weight: bold; color: #000; text-decoration: none; border: 1px solid #000; padding: 5px 10px; background: #fff; margin-bottom: 20px; }
+        .back-link:hover { background: #000; color: #fff; }
+        .headline-article { font-family: "Impact", sans-serif; font-size: 3rem; line-height: 1; margin: 20px 0; text-transform: uppercase; color: #414143; }
+        
+        /* PHOTOS CENTRÉES À 60% */
+        .article-img { 
+            width: 60%; 
+            display: block; 
+            margin: 30px auto; 
+            border: 3px solid #000; 
+            height: auto; 
+        }
+        
+        .content { font-size: 1.2rem; line-height: 1.6; text-align: justify; max-width: 800px; margin: auto; }
+        .dropcap { float: left; font-size: 4.5rem; line-height: 0.8; font-weight: bold; margin-right: 10px; font-family: "Impact", sans-serif; color: #414143; }
+        footer { margin-top: 50px; text-align: center; font-size: 0.8rem; border-top: 2px solid #000; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Mascotte" style="width: 100px; height: auto; background: transparent;">
+    <div style="text-align: left;">
+        <h1>LE REPTILIEN ENCHAÎNÉ</h1>
+        <span class="slogan">L'info qui rampe sous la vérité (et qui n'aime pas le froid)</span>
+    </div>
+</header>
+
+<div class="date-line">
+    <span id="date-du-jour">CHARGEMENT...</span>
+</div>
+
+<a href="index.html" class="back-link">← RETOUR À LA UNE</a>
+
+<main>
+    <div class="headline-article">Son grille pain est un vortex</div>
+
+    <img src="grillepain.png" alt="Photo 1" class="article-img">
+
+    <div class="content">
+        <p><span class="dropcap">G</span>érard Candide, jeune coiffeur pour chauves, découvre par un matin d' hiver que son grille pain à la faculté de le faire voyager
+dans le temps. Voulant se faire des toasts grillées à la confiture de cornichons, ce dernier branche son appareil et l' enclenche... Et c' est là qu' un stupéfiant
+phénomène se produit ! Un flash intense se produit, Gérard sent une énergie le saisir, son corps
+tremble puis c' est le grand voyage.</p>
+        
+        <p> Il se retrouve comme dans un tunnel et voit une lumière blanche au bout. Une fois cette lumière traversée, le voilà en face de Casimir sur le
+plateau de l' île aux enfants. C' est la stupéfaction pour ce fan du gros lézard orange depuis son enfance. Le voyage durequelques minutes puis la vision
+de Gérard se brouille, il s' évanouie et reviens à lui allongé dans sa cuisine. Il est vaseux, sans doute des effets
+secondaires de ce voyage temporel. Seule séquelle de son périple, une noirceur auxbouts des doigts de la main gauche...</p>
+
+        <p style="margin-top: 30px; font-weight: bold;">Le voyage dans le temps serait-il possible ? Il semble que oui...</p>
+    </div>
+</main>
+
+<footer><p>LE REPTILIEN ENCHAÎNÉ - TOUS DROITS RÉSERVÉS</p></footer>
+
+<script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
+    document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+</script>
+</body>
+</html>
