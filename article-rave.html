@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Abduction en Rave - Le Reptilien Enchaîné</title>
+    <style>
+        body {
+            background-color: #e8e4de;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            font-family: "Courier New", Courier, monospace;
+            color: #1a1a1a;
+            max-width: 900px;
+            margin: auto;
+            border: 5px double #000;
+            padding: 20px;
+            box-shadow: 10px 10px 0px #000;
+        }
+        header { display: flex; align-items: center; justify-content: center; gap: 25px; border-bottom: 8px solid #000; padding-bottom: 15px; }
+        h1 { font-family: "Impact", sans-serif; font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; transform: scaleY(1.2); color: #414143; }
+        .slogan { font-style: italic; font-weight: bold; display: block; margin-top: 5px; font-size: 1.2rem; }
+        .date-line { display: flex; justify-content: space-between; border-bottom: 2px solid #000; font-weight: bold; padding: 5px 0; margin-bottom: 20px; font-size: 0.9rem; }
+        .back-link { display: inline-block; font-weight: bold; color: #000; text-decoration: none; border: 1px solid #000; padding: 5px 10px; background: #fff; margin-bottom: 20px; }
+        .back-link:hover { background: #000; color: #fff; }
+        .headline-article { font-family: "Impact", sans-serif; font-size: 3rem; line-height: 1; margin: 20px 0; text-transform: uppercase; color: #414143; }
+        .full-article img { width: 100%; border: 3px solid #000; filter: grayscale(100%) contrast(120%); margin-bottom: 20px; }
+        .content { font-size: 1.2rem; line-height: 1.6; text-align: justify; max-width: 800px; margin: auto; }
+        .dropcap { float: left; font-size: 4.5rem; line-height: 0.8; font-weight: bold; margin-right: 10px; font-family: "Impact", sans-serif; color: #414143; }
+        
+        /* STYLE INTERVIEW */
+        .interview-box { background: rgba(255,255,255,0.5); padding: 20px; border: 1px dashed #000; margin-top: 20px; }
+        .locuteur { font-weight: bold; color: #414143; text-decoration: underline; }
+        .citation { font-style: italic; margin-bottom: 15px; display: block; }
+        
+        footer { margin-top: 50px; text-align: center; font-size: 0.8rem; border-top: 2px solid #000; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo.png" alt="Mascotte" style="width: 100px; height: auto; background: transparent;">
+    <div style="text-align: left;">
+        <h1>LE REPTILIEN ENCHAÎNÉ</h1>
+        <span class="slogan">L'info qui rampe sous la vérité (et qui n'aime pas le froid)</span>
+    </div>
+</header>
+
+<div class="date-line">
+    <span id="date-du-jour">CHARGEMENT...</span>
+    <span>ET ON ATTEND TOUJOURS LA FIN DU MONDE</span>
+</div>
+
+<a href="index.html" class="back-link">← RETOUR À LA UNE</a>
+
+<main class="full-article">
+    <div class="headline-article">J'ai été abducté en Rave Party !</div>
+    <p><strong>Sa vie a basculé dans la nuit du 32 Janvier 2018...</strong></p>
+
+    <img src="https://images.unsplash.com/photo-1514525253361-bee8718a7c73?q=80&w=1000&auto=format&fit=crop" alt="Lumières de fête">
+
+    <div class="content">
+        <p><span class="dropcap">A</span>lors que ce dernier participe à une guinguette champêtre électro, il est tout simplement enlevé par les petits gris ! Retour sur cet incroyable expérience avec le témoignage de l'abducté :</p>
+        
+        <div class="interview-box">
+            <span class="locuteur">L.R.E :</span> <span class="citation">Racontez nous votre enlèvement... Où et comment ça s'est passé ?</span>
+            
+            <span class="locuteur">Jean Mouloud :</span> <span class="citation">On était en teuf... J'ai pris des buvards... Heu !!! Des smarties !!!... Tout se passait bien, puis d'un coup c'est comme si le temps s'était suspendu... Les gens agissaient au ralenti... Et pis je l'ai vu !</span>
+
+            <span class="locuteur">L.R.E :</span> <span class="citation">Comment étaient-ils ?</span>
+
+            <span class="locuteur">Jean Mouloud :</span> <span class="citation">Au début, j'ai vu leurs soucoupes... Bleues et pleines de lumières, comme des gyrophares ! Puis ils sont sortis... Ils avaient des scaphandres tout noirs avec une visière transparente... J'ai vu leurs visages, ils sont comme nous !!! Ils m'ont dit de ne pas bouger, de m'allonger au sol et de mettre mes mains dans le dos ! J'ai voulu fuir, mais ils ont sorti une de leur arme et ont tiré un rayon paralysant... Et pis plus rien....</span>
+
+            <span class="locuteur">L.R.E :</span> <span class="citation">Et vous vous êtes réveillé ailleurs que du lieu de l'enlèvement ?</span>
+
+            <span class="locuteur">Jean Mouloud :</span> <span class="citation">Oui !!! Je me suis réveillé en face du commissariat !!! Quand j'ai voulu porter plainte, expliquer mon histoire, ils m'ont dit de dégager... Des menaces pour me faire taire !!! Le gouvernement veut étouffer l'affaire... Je suis devenu une menace pour eux !!!</span>
+        </div>
+
+        <p style="margin-top: 30px; font-weight: bold;">Incroyable histoire qui nous prouve bien que non seulement la vie existe ailleurs mais qu'elle nous rend régulièrement visite...</p>
+    </div>
+</main>
+
+<footer><p>LE REPTILIEN ENCHAÎNÉ - TOUS DROITS RÉSERVÉS</p></footer>
+
+<script>
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
+    document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+</script>
+</body>
+</html>
