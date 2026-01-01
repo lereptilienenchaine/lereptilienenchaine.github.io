@@ -17,6 +17,18 @@
             box-shadow: 10px 10px 0px #000;
         }
         header { display: flex; align-items: center; justify-content: center; gap: 25px; border-bottom: 8px solid #000; padding-bottom: 15px; }
+        .menu-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+            display: inline-block;
+        }
+        .menu-btn:hover { background-color: #333; }
         h1 { font-family: "Impact", sans-serif; font-size: 4rem; margin: 0; text-transform: uppercase; letter-spacing: -3px; transform: scaleY(1.2); color: #414143; }
         .slogan { font-style: italic; font-weight: bold; display: block; margin-top: 5px; font-size: 1.2rem; }
         .date-line { display: flex; justify-content: space-between; border-bottom: 2px solid #000; font-weight: bold; padding: 5px 0; margin-bottom: 20px; font-size: 0.9rem; }
@@ -47,7 +59,17 @@
         <span class="slogan" style="margin-top: 5px; display: block;">L'info qui rampe sous la vérité ( et qui n'aime pas le froid )</span>
     </div>
 </header>
-
+    
+<nav style="text-align: center; margin: 20px 0;">
+    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+        <a href="#" class="menu-btn">Ovni</a>
+        <a href="#" class="menu-btn">Sciences</a>
+        <a href="#" class="menu-btn">Complots</a>
+        <a href="#" class="menu-btn">Rumeurs</a>
+        <a href="#" class="menu-btn">Contact</a>
+    </div>
+</nav>
+    
 <div class="date-line">
     <span id="date-du-jour">CHARGEMENT...</span>
 </div>
