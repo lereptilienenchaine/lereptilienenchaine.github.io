@@ -191,14 +191,22 @@ GRAVITÉ EST UN MYTHE</h2>
 </div>
 
 <footer>
-    <p>🏆 <strong>PRIX du site le plus paranoîaque en 1996</strong> 🏆</p>
+    <p>🏆 <strong>PRIX du site le plus paranoïaque en 1996</strong> 🏆</p>
     <p>Ce site n'existe pas officiellement. Si vous le lisez, c'est que vous faites partie de l'élite.</p>
+    <p>&copy; <span id="year"></span> Le reptilien enchaîné - Tous droits réservés.Contenu satirique. La reproduction de cette page est un crime passible d'effacement mémoriel.</p>
 </footer>
 
 <script>
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
-    document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+    
+    // On vérifie si l'élément existe avant de remplir (sécurité)
+    if(document.getElementById('date-du-jour')){
+        document.getElementById('date-du-jour').innerText = aujourdhui.toUpperCase();
+    }
+    
+    // Mise à jour automatique de l'année du copyright
+    document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 
 </body>
