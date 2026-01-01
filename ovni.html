@@ -60,14 +60,14 @@
             margin-bottom: 20px;
         }
         .column-container {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
-        }
-        .main-article {
-            border-right: 1px solid #000;
-            padding-right: 20px;
-        }
+    display: block; /* On annule la grille */
+    max-width: 700px; /* On réduit un peu la largeur pour que ce soit plus lisible en plein milieu */
+    margin: 0 auto; /* On centre le bloc */
+}
+.main-article {
+    border-right: none; /* On enlève la barre noire verticale de séparation */
+    padding-right: 0;
+}
         /* LE STYLE DES ENCADRÉS SUR L'ACCUEIL */
         .article-card {
             display: flex; 
@@ -157,7 +157,6 @@
    <div class="sidebar">
     <h3 style="text-align:center; border-bottom: 2px solid #000; padding-bottom:5px; margin-top:0; font-family: 'Impact', sans-serif; text-transform: uppercase;">Dernières rumeurs</h3>
     
-    <iframe src="sidebar-content.html" style="width:100%; height:1500px; border:none; background:transparent;"></iframe>
 </div>
 </div>
 
