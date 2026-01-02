@@ -11,7 +11,7 @@
             background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
             font-family: 'Montserrat', sans-serif;
             color: #1a1a1a;
-            max-width: 900px;
+            max-width: 1100px; /* Élargi pour la grille de 4 */
             margin: auto;
             border: 5px double #000;
             padding: 20px;
@@ -59,42 +59,43 @@
             padding: 5px 0;
             margin-bottom: 20px;
         }
+
+        /* MODIFICATION : GRILLE DE 4 ET SUPPRESSION SIDEBAR */
         .column-container {
             display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+            gap: 15px;
         }
-        .main-article {
-            border-right: 1px solid #000;
-            padding-right: 20px;
-        }
-        /* LE STYLE DES ENCADRÉS SUR L'ACCUEIL */
+
+        /* STYLE DES CARTES REVISITÉ POUR LA GRILLE */
         .article-card {
             display: flex; 
-            gap: 20px; 
-            margin-bottom: 30px; 
+            flex-direction: column; /* Contenu l'un sous l'autre */
             border: 2px solid #000; 
-            padding: 15px; 
+            padding: 10px; 
             background: #fdfcfb; 
             box-shadow: 5px 5px 0px #000;
+            text-align: center;
         }
+        
         .article-card h2 {
-    color: #414143;
-    margin-top: 0;
-    font-family: 'Impact', sans-serif;
-    text-transform: uppercase;
-}
-        .sidebar {
-            background: #dcd7cf;
-            padding: 10px;
-            border: 1px solid #000;
+            color: #414143;
+            margin: 10px 0;
+            font-family: 'Impact', sans-serif;
+            text-transform: uppercase;
+            font-size: 1.1rem; /* Taille adaptée à la grille */
+            line-height: 1;
         }
+
         img.fake-photo {
             filter: grayscale(100%) contrast(150%) brightness(80%);
             border: 2px solid #000;
             width: 100%;
-            margin: 10px 0;
+            height: 150px; /* Hauteur fixe pour l'alignement */
+            object-fit: cover;
+            margin: 0;
         }
+
         footer {
             margin-top: 40px;
             text-align: center;
@@ -108,7 +109,8 @@
             text-decoration: none;
             font-weight: bold;
             display: inline-block;
-            margin-top: 10px;
+            margin-top: auto; /* Pousse le bouton en bas */
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -138,72 +140,35 @@
 </div>
 
 <div class="column-container">
-    <div class="main-article">
+    <article class="article-card">
+        <img src="trump.png" class="fake-photo" alt="Photo" style="filter: none;">
+        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Trump est un alien</h2>
+        <a href="Trumpalien.html" class="btn-plus">VOIR →</a>
+    </article>
 
-        <article class="article-card">
-    <div style="flex: 2;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">Trump est un alien</h2>
-        <p>Aprés 38 ans de service, Madame Slut, dame pipi de la maison blanche, pensaiten avoir vu beaucoup au cours de sa
-longue carrière mais rien n' aurait pu la préparer à... </p>
-        <a href="Trumpalien.html" class="btn-plus">LIRE LA SUITE →</a>
-    </div>
-    <div style="flex: 1;">
-        <img src="trump.png" class="fake-photo" alt="Rave" style="filter: none;">
-    </div>
-</article>
+    <article class="article-card">
+        <img src="dorotheecia.png" class="fake-photo" alt="Photo" style="filter: none;">
+        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Dorothée agent C.I.A</h2>
+        <a href="article-dorothee.html" class="btn-plus">VOIR →</a>
+    </article>
 
-         <article class="article-card">
-    <div style="flex: 2;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">Dorothée était un agent de la C.I.A</h2>
-        <p>La nouvelle aurait pu rester encore longtemps secrète si un de nos informateurs, dont nous taierons la source, ne nous avait pas informé sur un complot </p>
-        <a href="article-dorothee.html" class="btn-plus">LIRE LA SUITE →</a>
-    </div>
-    <div style="flex: 1;">
-        <img src="dorotheecia.png" class="fake-photo" alt="Rave" style="filter: none;">
-    </div>
-</article>
+    <article class="article-card">
+        <img src="grillepain.png" class="fake-photo" alt="Photo" style="filter: none;">
+        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Grille-pain vortex</h2>
+        <a href="article-grillepain.html" class="btn-plus">VOIR →</a>
+    </article>
 
-         <article class="article-card">
-    <div style="flex: 2;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">Son grille-pain est un vortex</h2>
-        <p>Gérard Candide, jeune coiffeur pour chauves, découvre que son grille-pain à la faculté de le faire voyager dans le temps... </p>
-        <a href="article-grillepain.html" class="btn-plus">LIRE LA SUITE →</a>
-    </div>
-    <div style="flex: 1;">
-        <img src="grillepain.png" class="fake-photo" alt="Rave" style="filter: none;">
-    </div>
-</article>
+    <article class="article-card">
+        <img src="blesse.jpg" class="fake-photo" alt="Photo" style="filter: none;">
+        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Gravité : Le mythe</h2>
+        <a href="article-gravite.html" class="btn-plus">VOIR →</a>
+    </article>
 
-        <article class="article-card">
-    <div style="flex: 2;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">IL VEUT PROUVER QUE LA
-GRAVITÉ EST UN MYTHE</h2>
-        <p>Voulant prouver sa théorie, un chercheur de vérité chute gravement du 3 éme étage de son immeuble....</p>
-        <a href="article-gravite.html" class="btn-plus">LIRE LA SUITE →</a>
-    </div>
-    <div style="flex: 1;">
-        <img src="blesse.jpg" class="fake-photo" alt="Rave" style="filter: none;">
-    </div>
-</article>
-
-       <article class="article-card">
-    <div style="flex: 2;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">J'AI ÉTÉ ABDUCTÉ EN RAVE PARTY !</h2>
-        <p>Le témoignage choc de Jean Mouloud, enlevé par des soucoupes à gyrophares en pleine teuf...</p>
-        <a href="article-rave.html" class="btn-plus">LIRE LA SUITE →</a>
-    </div>
-    <div style="flex: 1;">
-        <img src="abducterave.PNG" class="fake-photo" alt="Rave" style="filter: none;">
-    </div>
-</article>
-
-    </div>
-
-    <div class="sidebar">
-    <h3 style="text-align:center; border-bottom: 2px solid #000; padding-bottom:5px; margin-top:0; font-family: 'Impact', sans-serif; text-transform: uppercase;">Dernières rumeurs</h3>
-    
-    <iframe src="sidebar-content.html" style="width:100%; height:800px; border:none; background:transparent;"></iframe>
-</div>
+    <article class="article-card">
+        <img src="abducterave.PNG" class="fake-photo" alt="Photo" style="filter: none;">
+        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Abducté en Rave !</h2>
+        <a href="article-rave.html" class="btn-plus">VOIR →</a>
+    </article>
 </div>
 
 <footer>
@@ -217,13 +182,10 @@ GRAVITÉ EST UN MYTHE</h2>
 </footer>
 
 <script>
-    // Date du jour (pour ton élément 'date-du-jour')
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
     const dateEl = document.getElementById('date-du-jour');
     if(dateEl) dateEl.innerText = aujourdhui.toUpperCase();
-
-    // Mise à jour automatique de l'année 2026
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
