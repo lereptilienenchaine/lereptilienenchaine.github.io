@@ -1,3 +1,8 @@
+C'est compris. On simplifie encore pour ne garder que le visuel pur : les titres et les boutons disparaissent, et c'est l'image elle-même qui devient le lien cliquable remplissant toute la case de la grille.
+
+Voici le code mis à jour :
+HTML
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,7 +16,7 @@
             background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
             font-family: 'Montserrat', sans-serif;
             color: #1a1a1a;
-            max-width: 1100px; /* Élargi pour la grille de 4 */
+            max-width: 1100px;
             margin: auto;
             border: 5px double #000;
             padding: 20px;
@@ -60,39 +65,34 @@
             margin-bottom: 20px;
         }
 
-        /* MODIFICATION : GRILLE DE 4 ET SUPPRESSION SIDEBAR */
+        /* GRILLE DE 4 PHOTOS SANS TEXTE */
         .column-container {
             display: grid;
-            grid-template-columns: repeat(4, 1fr); /* 4 colonnes égales */
+            grid-template-columns: repeat(4, 1fr); 
             gap: 15px;
         }
 
-        /* STYLE DES CARTES REVISITÉ POUR LA GRILLE */
+        /* L'ARTICLE DEVIENT UN LIEN PLEINE TAILLE */
         .article-card {
-            display: flex; 
-            flex-direction: column; /* Contenu l'un sous l'autre */
+            display: block; 
             border: 2px solid #000; 
-            padding: 10px; 
             background: #fdfcfb; 
             box-shadow: 5px 5px 0px #000;
-            text-align: center;
+            overflow: hidden; /* Pour que l'image ne dépasse pas */
+            transition: transform 0.1s;
         }
-        
-        .article-card h2 {
-            color: #414143;
-            margin: 10px 0;
-            font-family: 'Impact', sans-serif;
-            text-transform: uppercase;
-            font-size: 1.1rem; /* Taille adaptée à la grille */
-            line-height: 1;
+
+        .article-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 7px 7px 0px #000;
         }
 
         img.fake-photo {
             filter: grayscale(100%) contrast(150%) brightness(80%);
-            border: 2px solid #000;
             width: 100%;
-            height: 150px; /* Hauteur fixe pour l'alignement */
+            height: 250px; /* Ajuste la hauteur selon tes besoins */
             object-fit: cover;
+            display: block;
             margin: 0;
         }
 
@@ -100,16 +100,6 @@
             margin-top: 40px;
             text-align: center;
             border-top: 2px solid #000;
-            font-size: 0.8rem;
-        }
-        a.btn-plus {
-            background: #000;
-            color: #fff;
-            padding: 5px 10px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            margin-top: auto; /* Pousse le bouton en bas */
             font-size: 0.8rem;
         }
     </style>
@@ -140,35 +130,25 @@
 </div>
 
 <div class="column-container">
-    <article class="article-card">
+    <a href="Trumpalien.html" class="article-card">
         <img src="trump.png" class="fake-photo" alt="Photo" style="filter: none;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Trump est un alien</h2>
-        <a href="Trumpalien.html" class="btn-plus">VOIR →</a>
-    </article>
+    </a>
 
-    <article class="article-card">
+    <a href="article-dorothee.html" class="article-card">
         <img src="dorotheecia.png" class="fake-photo" alt="Photo" style="filter: none;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Dorothée agent C.I.A</h2>
-        <a href="article-dorothee.html" class="btn-plus">VOIR →</a>
-    </article>
+    </a>
 
-    <article class="article-card">
+    <a href="article-grillepain.html" class="article-card">
         <img src="grillepain.png" class="fake-photo" alt="Photo" style="filter: none;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Grille-pain vortex</h2>
-        <a href="article-grillepain.html" class="btn-plus">VOIR →</a>
-    </article>
+    </a>
 
-    <article class="article-card">
+    <a href="article-gravite.html" class="article-card">
         <img src="blesse.jpg" class="fake-photo" alt="Photo" style="filter: none;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Gravité : Le mythe</h2>
-        <a href="article-gravite.html" class="btn-plus">VOIR →</a>
-    </article>
+    </a>
 
-    <article class="article-card">
+    <a href="article-rave.html" class="article-card">
         <img src="abducterave.PNG" class="fake-photo" alt="Photo" style="filter: none;">
-        <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase;">Abducté en Rave !</h2>
-        <a href="article-rave.html" class="btn-plus">VOIR →</a>
-    </article>
+    </a>
 </div>
 
 <footer>
@@ -177,7 +157,6 @@
     
     <hr style="border: 0.5px solid #444; width: 50%; margin: 20px auto;"> <p>Contenu satirique</p>
     <p>Tous droits réservés.</p>
-    <p>La reproduction des articles ou photos est un crime passible d'effacement mémoriel.</p>
     <p>&copy; <span id="year"></span> <strong>Le reptilien enchaîné</strong></p>
 </footer>
 
