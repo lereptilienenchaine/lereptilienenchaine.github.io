@@ -76,6 +76,7 @@
             padding: 15px; 
             background: #d2cdc4; 
             box-shadow: 5px 5px 0px #000;
+            align-items: center;
         }
       .article-card h2 {
     font-family: 'Montserrat', sans-serif;
@@ -92,11 +93,13 @@
             padding: 10px;
             border: 1px solid #000;
         }
-        img.fake-photo {
-            filter: grayscale(100%) contrast(150%) brightness(80%);
+       img.fake-photo {
             border: 2px solid #000;
-            width: 100%;
-            margin: 10px 0;
+            width: 100%;       /* Prend toute la largeur de sa colonne */
+            height: 150px;      /* FORCE une hauteur fixe pour l'harmonie */
+            object-fit: cover;  /* Recadre sans déformer */
+            margin: 0;
+            display: block;
         }
         footer {
             margin-top: 40px;
