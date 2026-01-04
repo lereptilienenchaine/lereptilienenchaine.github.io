@@ -2,7 +2,8 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>SITCOMS : LE CODE CACHÉ - Le Reptilien Enchaîné</title>
+    
+    <title>LE REPTILIEN ENCHAÎNÉ - L'Info qui rampe</title>
     <style>
         body {
             background-color: #e8e4de;
@@ -14,30 +15,6 @@
             border: 5px double #000;
             padding: 20px;
         }
-        header { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 10px; 
-            border-bottom: 8px solid #000; 
-            padding-bottom: 15px; 
-        }
-        h1 { 
-            font-family: "Impact", sans-serif; 
-            font-size: 4rem; 
-            margin: 0; 
-            text-transform: uppercase; 
-            letter-spacing: -3px; 
-            transform: scaleY(1.2); 
-            color: #414143; 
-        }
-        .slogan { 
-            font-style: italic; 
-            font-weight: bold; 
-            display: block; 
-            margin-top: 5px; 
-            font-size: 1.2rem; 
-        }
         .menu-btn {
             background-color: #000;
             color: #fff;
@@ -47,124 +24,174 @@
             font-weight: bold;
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
-            display: inline-block;
+            transition: background-color 0.2s;
         }
-        .date-line { 
-            display: flex; 
-            justify-content: space-between; 
-            border-bottom: 2px solid #000; 
-            font-weight: bold; 
-            padding: 5px 0; 
-            margin-bottom: 20px; 
+        .menu-btn:hover {
+            background-color: #333;
         }
-        .article-complet {
-            background-color: #d2cdc4;
-            border: 2px solid #000;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 8px 8px 0px #000;
-        }
-        .headline-article { 
-            font-family: "Impact", sans-serif; 
-            font-size: 3rem; 
-            line-height: 1; 
-            margin-bottom: 10px; 
-            text-transform: uppercase; 
-            color: #414143; 
+        header {
             text-align: center;
+            border-bottom: 8px solid #000;
+            padding-bottom: 10px;
         }
-        
-        /* RÉGLAGE IMAGE HARMONIEUX */
-        .article-img { 
-            width: 100%; 
-            max-width: 600px;
-            height: 350px; /* Hauteur fixe pour l'élégance */
-            object-fit: cover; /* Recadrage automatique */
-            display: block; 
-            margin: 30px auto; 
-            border: 4px solid #000; 
+        h1 {
+            font-family: "Impact", sans-serif;
+            font-size: 4rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            transform: scaleY(1.2);
+            color: #414143;
         }
-        
-        .content { font-size: 1.2rem; line-height: 1.6; text-align: justify; }
-        .dropcap { 
-            float: left; 
-            font-size: 4.5rem; 
-            line-height: 0.8; 
-            font-weight: bold; 
-            margin-right: 10px; 
-            font-family: "Impact", sans-serif; 
+        .slogan {
+            font-style: italic;
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+            font-size: 1.2rem;
         }
-        h2 { 
-            font-family: "Impact", sans-serif; 
-            text-transform: uppercase; 
-            border-bottom: 2px solid #000; 
-            margin-top: 30px;
+        .date-line {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 2px solid #000;
+            font-weight: bold;
+            padding: 5px 0;
+            margin-bottom: 20px;
         }
-        footer { 
-            margin-top: 40px; 
-            text-align: center; 
-            border-top: 2px solid #000; 
-            font-size: 0.8rem; 
+        .column-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+        }
+        .main-article {
+            border-right: 1px solid #000;
+            padding-right: 20px;
+        }
+        /* LE STYLE DES ENCADRÉS SUR L'ACCUEIL */
+        .article-card {
+            display: flex; 
+            gap: 20px; 
+            margin-bottom: 30px; 
+            border: 2px solid #000; 
+            padding: 15px; 
+            background: #d2cdc4; 
+            box-shadow: 5px 5px 0px #000;
+        }
+        .article-card h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400; 
+            font-size: 1.6rem; 
+            color: #414143;
+            margin-top: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px; 
+            line-height: 1.2;
+        }
+        .sidebar {
+            background: #dcd7cf;
+            padding: 10px;
+            border: 1px solid #000;
+        }
+        img.fake-photo {
+            filter: grayscale(100%) contrast(150%) brightness(80%);
+            border: 2px solid #000;
+            width: 100%;
+            margin: 10px 0;
+        }
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            border-top: 2px solid #000;
+            font-size: 0.8rem;
+        }
+        a.btn-plus {
+            background: #000;
+            color: #fff;
+            padding: 5px 10px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
 
-<header>
-    <img src="serpent.png" alt="Mascotte" style="width: 80px; height: auto;">
+<header style="display: flex; align-items: center; justify-content: center; gap: 10px; border-bottom: 8px solid #000; padding-bottom: 15px;">
+    <img src="serpent.png" alt="Mascotte" style="width: 100px; height: auto; background: transparent;">
+    
     <div style="text-align: left;">
-        <h1>LE REPTILIEN ENCHAÎNÉ</h1>
-        <span class="slogan">L'info qui rampe sous la vérité</span>
+        <h1 style="margin: 0; line-height: 1;">LE REPTILIEN ENCHAÎNÉ</h1>
+        <span class="slogan" style="margin-top: 5px;">L'info qui rampe sous la vérité ( et qui n'aime pas le froid )</span>
     </div>
 </header>
-
-<nav style="text-align: center; margin: 20px 0;">
-    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-        <a href="index.html" class="menu-btn">Accueil</a>
-        <a href="ovni.html" class="menu-btn">Ovni</a>
-        <a href="sciences.html" class="menu-btn">Sciences</a>
-        <a href="complots.html" class="menu-btn">Complots</a>
-        <a href="rumeurs.html" class="menu-btn">Rumeurs</a>
-        <a href="contact.html" class="menu-btn">Contact</a>
-    </div>
-</nav>
+    <nav style="text-align: center; margin: 20px 0;">
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <a href="ovni.html" class="menu-btn">Ovni</a>
+            <a href="sciences.html" class="menu-btn">Sciences</a>
+            <a href="complots.html" class="menu-btn">Complots</a>
+            <a href="rumeurs.html" class="menu-btn">Rumeurs</a>
+            <a href="contact.html" class="menu-btn">Contact</a>
+        </div>
+    </nav>
 
 <div class="date-line">
-    <span id="date-du-jour">CHARGEMENT...</span>
-    <span>DOSSIER SECRET DÉFENSE #HA-HA-90</span>
+    <span id="date-du-jour">CHARGEMENT DE LA VÉRITÉ...</span>
+    <span>ET ON ATTEND TOUJOURS LA FIN DU MONDE</span>
 </div>
 
-<main class="article-complet">
-    <h1 class="headline-article">Les rires enregistrés étaient des codes morses</h1>
-    <p style="text-align: center; font-weight: bold; font-size: 1.2rem;">OPÉRATION "HA-HA" : Des agents activés par code Morse sonore.</p>
+<div class="column-container">
+    <div class="main-article">
 
-    <img src="sitcomondes.jpg" alt="Ondes sonores et télé vintage" class="article-img">
+        <article class="article-card">
+            <div style="flex: 2;">
+                <h2 style="font-family: 'Impact', sans-serif; text-transform: uppercase; margin-top: 0;">Les rires enregistrés étaient des codes morses</h2>
+                <p>La vérité sur l'âge d'or de la télévision française vient de voler en éclats. Derrière les décors en carton-pâte et les amourettes lycéennes des années 90 se cachait un programme de conditionnement psychologique. Un ex-agent brise le silence.</p>
+                <p>Selon ses révélations, les pistes sonores de séries cultes contenaient des couches audio subliminales. En analysant le spectre sonore des éclats de rire, on découvre des micro-coupures formant un code Morse complexe. Un rire gras suivi d'un gloussement bref était l'ordre de passer en phase de surveillance pour les agents dormants.</p>
+                <p>La DGSE profitait du relâchement des téléspectateurs pour "recharger" les ordres dans l'inconscient d'individus qui ignoraient leur fonction jusqu'au signal. La prochaine fois que vous entendrez un rire dans une vieille série, ne riez pas : vérifiez votre voisin.</p>
+            </div>
+            <div style="flex: 1;">
+                <img src="sitcom-rires.png" class="fake-photo" alt="Rave" style="filter: none;">
+            </div>
+        </article>
 
-    <div class="content">
-        <p><span class="dropcap">L</span>a vérité sur l'âge d'or de la télévision française vient de voler en éclats. Derrière les décors en carton-pâte et les amourettes lycéennes des années 90 se cachait l'un des programmes de conditionnement psychologique les plus vastes de l'histoire du renseignement français. Jean-Sébastien M., ancien ingénieur du son pour les services secrets (DGSE) reconverti dans la production audiovisuelle, a décidé de briser le silence : « Nous n'enregistrions pas des rires, nous diffusions des ordres. »</p>
-
-        <h2>Le morse fréquentiel : la science de l'infiltration</h2>
-        <p>Selon ses révélations, les pistes sonores de séries cultes comme <em>Hélène et les Garçons</em> ou <em>Premiers Baisers</em> contenaient des couches audio subliminales. En analysant le spectre sonore des éclats de rire, on découvre des micro-coupures et des variations de tonalité qui forment un code Morse complexe.</p>
-        <p>« Un rire gras de trois secondes suivi d'un gloussement bref ? C'était l'ordre de passer en phase de surveillance pour les agents infiltrés dans les administrations », explique l'ex-agent. Ce système permettait de transmettre des instructions à des milliers d'individus sans éveiller le moindre soupçon.</p>
-
-        <h2>Des agents dormants dans chaque salon</h2>
-        <p>Pourquoi les années 90 ? Parce que c'était l'époque de la télévision reine. Chaque soir, des millions de cerveaux étaient en état de réceptivité maximale. La DGSE profitait de ce moment de relâchement pour "recharger" les ordres dans l'inconscient de ses agents dormants, souvent des citoyens ordinaires qui ignoraient eux-mêmes leur véritable fonction jusqu'au déclenchement du signal.</p>
-
-        <p style="margin-top: 30px; font-weight: bold; text-align: center; background: #000; color: #fff; padding: 10px;">
-            La prochaine fois que vous entendrez un rire dans une vieille série, ne riez pas : vérifiez que votre voisin ne vient pas de changer de regard.
-        </p>
     </div>
-</main>
+
+    <div style="display: flex; flex-direction: column;"> 
+
+        <div style="background-color: #d2cdc4; border: 1px solid #000; padding: 15px; margin-bottom: 20px; text-align: center;">
+            <h4 style="margin: 0 0 10px 0; font-family: 'Montserrat', sans-serif;; text-transform: uppercase; font-size: 1.1rem; border-bottom: 2px solid #000; padding-bottom: 5px;color: #414143;">
+                Source du mois
+            </h4>
+            <img src="sitcomondes.jpg" alt="Informateur" style="width: 100%; height: auto; border: 1px solid #000; display: block; margin-bottom: 10px; filter: grayscale(100%);">
+            <p style="font-size: 0.85rem; font-weight: normal; margin: 0; line-height: 1.3;">
+                A fourni les plans des arroseurs municipaux qui diffusent du sérum de docilité à 4h du matin.
+            </p>
+        </div>
+        <div class="sidebar">
+            <h3 style="text-align:center; border-bottom: 2px solid #000; padding-bottom:5px; margin-top:0; font-family: 'Montserrat', sans-serif; text-transform: uppercase;color: #414143;">Dernières rumeurs</h3>
+            <iframe src="sidebar-content.html" style="width:100%; height:800px; border:none; background:transparent;"></iframe>
+        </div>
+    </div>
+</div>
 
 <footer>
-    <p>&copy; <span id="year"></span> <strong>Le reptilien enchaîné</strong> - Contenu satirique</p>
+    <p>🏆 <strong>PRIX du site le plus paranoïaque en 1996</strong> 🏆</p>
+    <p>Ce site n'existe pas officiellement. Si vous le lisez, c'est que vous faites partie de l'élite.</p>
+    
+    <hr style="border: 0.5px solid #444; width: 50%; margin: 20px auto;"> <p>Contenu satirique</p>
+    <p>Tous droits réservés.</p>
+    <p>La reproduction des articles ou photos est un crime passible d'effacement mémoriel.</p>
+    <p>&copy; <span id="year"></span> <strong>Le reptilien enchaîné</strong></p>
 </footer>
 
 <script>
     const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-    document.getElementById('date-du-jour').innerText = new Date().toLocaleDateString('fr-FR', options).toUpperCase();
+    const aujourdhui = new Date().toLocaleDateString('fr-FR', options);
+    const dateEl = document.getElementById('date-du-jour');
+    if(dateEl) dateEl.innerText = aujourdhui.toUpperCase();
+
     document.getElementById('year').textContent = new Date().getFullYear();
 </script>
-
 </body>
 </html>
